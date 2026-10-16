@@ -21,9 +21,15 @@ https://apps.microsoft.com/detail/9MXV6M967R4T
 
 ---
 
-## ⚠️ 安装时的安全提示（看一眼能省你两分钟）
+## ⚠️ 安装时的安全提示（请先看一眼）
 
-本应用**没有购买代码签名证书**（个人开发者购买证书的成本较高），所以从浏览器下载的安装包在首次运行时，Windows 会弹出蓝色的提示：
+本应用**没有购买代码签名证书**（个人开发者购买证书的成本较高），所以安装时可能被系统拦下。
+
+**根据你的系统情况有两道拦截，能不能点过去完全不同** —— 请先分清自己是哪一种。
+
+### 第一道：SmartScreen（大部分人遇到，可以点过去）
+
+从浏览器下载的安装包首次运行时，Windows 会弹出蓝色提示：
 
 **「Windows 已保护你的电脑」**（英文系统为 *Windows protected your PC*）
 
@@ -33,9 +39,26 @@ https://apps.microsoft.com/detail/9MXV6M967R4T
 2. 点击随后出现的 **「仍要运行」**
 3. 正常走安装流程即可
 
-如果你想彻底避开这个提示，**用上面的微软商店版本** —— 由微软签名，不会有任何警告。
+> 说明：应用**装好之后的自动更新不会再弹这个提示**。更新包是应用自己下载的、不经过浏览器，不带「来自 Internet」的标记。这个提示你只需要面对一次。
 
-> 另外说明：应用**装好之后的自动更新不会再弹这个提示**。因为更新包是应用自己下载的、不经过浏览器，不带「来自 Internet」的标记。也就是说这个提示你只需要面对一次。
+### 第二道：智能应用控制（部分 Windows 11 遇到，**点不过去**）
+
+如果你用的是**全新安装的** Windows 11（不是从旧系统升级上来的），系统可能开着「智能应用控制」（Smart App Control）。它会直接拦下未签名的程序，而且**没有「仍要运行」这个选项**：
+
+- 提示内容类似「智能应用控制已阻止此应用」
+- **不支持针对单个应用放行** —— 系统层面就没有这个功能，也没有例外名单
+- 唯一的办法是把「智能应用控制」整个关掉，但它**一旦关闭，必须重置或重装 Windows 才能再打开**
+
+**所以遇到这道拦截，请不要去关它，直接改用上面的微软商店版本。** 商店里的应用由微软签名和分发、被系统视为可信，不受这道限制影响。
+
+> 补充：智能应用控制处于开启状态时，自动更新下载的安装包同样可能被阻止。这种情况也请改用商店版本。
+
+### 怎么判断自己遇到的是哪一道
+
+| 你看到的 | 是哪一道 | 怎么办 |
+|---|---|---|
+| 蓝底「Windows 已保护你的电脑」，有「更多信息」可点 | SmartScreen | 点「更多信息」→「仍要运行」 |
+| 「智能应用控制已阻止此应用」，**没有任何可以点过去的按钮** | 智能应用控制 | 改用微软商店版本 |
 
 ---
 
@@ -110,9 +133,15 @@ Signed and distributed by Microsoft. No warnings during installation, and update
 
 ---
 
-## ⚠️ About the security warning when installing (saves you two minutes)
+## ⚠️ About security warnings when installing (please read first)
 
-This app is **not code-signed** (a signing certificate is costly for an individual developer), so when you run an installer downloaded from a browser, Windows shows a blue prompt:
+This app is **not code-signed** (a signing certificate is costly for an individual developer), so your system may block it.
+
+**Depending on your system there are two different blocks, and whether you can click through differs completely.** Figure out which one you have first.
+
+### First: SmartScreen (most people, you can click through)
+
+When you run an installer downloaded from a browser, Windows shows a blue prompt:
 
 **"Windows protected your PC"**
 
@@ -122,9 +151,26 @@ This is how Windows treats **every program that is unsigned and not yet widely d
 2. Click **"Run anyway"** that appears below
 3. Continue with the normal installation
 
-If you would rather avoid this entirely, **use the Microsoft Store version above** — it is signed by Microsoft and shows no warnings.
-
 > Note: **auto-updates will not show this prompt again.** Update packages are downloaded by the app itself (not through a browser), so they carry no "downloaded from the Internet" mark. You only face this prompt once.
+
+### Second: Smart App Control (some Windows 11 devices, **no way through**)
+
+If your Windows 11 was **cleanly installed** (not upgraded from an older version), Smart App Control may be enabled. It blocks unsigned programs outright, and **there is no "Run anyway" option**:
+
+- The message looks like "Smart App Control blocked this app"
+- **There is no per-app exception** — the feature simply does not work that way, and there is no allow list
+- The only way around it is to turn Smart App Control off entirely — and once off, it **can only be re-enabled by resetting or reinstalling Windows**
+
+**If you hit this block, please do not turn it off — use the Microsoft Store version above instead.** Store apps are signed and distributed by Microsoft and are treated as trusted, so they are not affected.
+
+> Note: while Smart App Control is on, the installer delivered by auto-update may be blocked as well. In that case, the Store version is the recommended path.
+
+### Which one are you seeing?
+
+| What you see | Which block | What to do |
+|---|---|---|
+| Blue "Windows protected your PC" with a clickable "More info" | SmartScreen | Click "More info" → "Run anyway" |
+| "Smart App Control blocked this app" with **no button to proceed** | Smart App Control | Use the Microsoft Store version |
 
 ---
 
